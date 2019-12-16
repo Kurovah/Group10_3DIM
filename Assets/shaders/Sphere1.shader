@@ -2,11 +2,9 @@
 {
     Properties
     {
-        _Color ("Color", Color) = (1,1,1,1)
-		_rockColor("Rcolor", Color) = (1,1,1,1)
+        _MagmaColor ("Color", Color) = (1,0,1,1)
+		_RockColor("Rcolor", Color) = (1,1,0,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        _Metallic ("Metallic", Range(0,1)) = 0.0
     }
     SubShader
     {
@@ -26,10 +24,8 @@
         {
             float2 uv_MainTex;
         };
-
-        half _Glossiness;
-        half _Metallic;
-        fixed4 _Color;
+        fixed4 _RockColor;
+		fixed4 _MagmaColor;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -41,12 +37,20 @@
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-            o.Albedo = c.rgb;
-			o.Emission = c.rgb;
-            // Metallic and smoothness come from slider variables
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
+			if (c.r == 1) {
+				o.Albedo = _MagmaColor;
+				o.Emission = _MagmaColor;
+			}
+			else if(c.r == 0){
+				o.Albedo = _RockColor;
+				o.Emission = _RockColor;
+			}
+			else {
+				o.Albedo = lerp(_RockColor, _MagmaColor, c.r);
+				o.Emission = lerp(_RockColor, _MagmaColor, c.r);
+
+			}
             o.Alpha = c.a;
         }
         ENDCG
