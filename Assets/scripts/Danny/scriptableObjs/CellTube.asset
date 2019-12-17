@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05685f615c674b049bf6b1a54b731c3b, type: 3}
-  m_Name: PepperTube
+  m_Name: CellTube
   m_EditorClassIdentifier: 
-  item: {fileID: 6562956547430736993, guid: b7ebc0c9d8f3d9c4a809aac01ebe900b, type: 3}
-  description: 'This Pepper was found on the planet C5-G10, it was found preserved
-    rather well amongst the wreckage of what seems like an ancient civilisation.  '
+  item: {fileID: 5545291535167596505, guid: c0ea11be6ce93cb4490b13ce38a9010b, type: 3}
+  description: This Power-cel was found on the planet verandin, it appears to have
+    reality warping effects on it's surroundings (which are currently being exibited
+    at this very moment)

@@ -6,7 +6,7 @@ using UnityEngine;
 public class char_control : MonoBehaviour
 {
     private Rigidbody rb;
-    public Transform cam,wheel;
+    public Transform cam;
     public Animator anim;
     RaycastHit ray;
     private Vector3 velo, move;
@@ -38,7 +38,6 @@ public class char_control : MonoBehaviour
             if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookVelo), 0.1f);
-                wheel.Rotate(0, 0, 3);
             }
             rb.velocity = velo;
             float mve = Mathf.Sqrt(Mathf.Pow(move.x, 2) + Mathf.Pow(move.z, 2));
