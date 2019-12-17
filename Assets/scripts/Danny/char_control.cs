@@ -2,31 +2,23 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class char_control : MonoBehaviour
 {
     private Rigidbody rb;
     public Transform cam,wheel;
     public Animator anim;
-    public GameObject Panel, playerCam;
-    public Text PanelText;
     RaycastHit ray;
     private Vector3 velo, move;
-    private float spd, jumpPow, grav,offset,camAngle;
-    private bool grounded, canMove;
+    private float spd;
+    public bool canMove;
     // Start is called before the first frame update
     void Start()
     {
         spd = 15;
         rb = GetComponent<Rigidbody>();
         velo = move  = Vector3.zero;
-        grav = 1;
-        jumpPow = 12;
-        grounded = false;
-        camAngle = 0;
         canMove = true;
-        Panel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,28 +51,6 @@ public class char_control : MonoBehaviour
         
     }
 
-    public void OnTriggerStay(Collider col)
-    {
-        //look for the tube triggers
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            canMove = !canMove;
-            if (playerCam.GetComponent<newCamControl>().state == 0) { 
-                playerCam.GetComponent<newCamControl>().state = 1;
-                playerCam.GetComponent<newCamControl>().cPoint = col.gameObject.GetComponent<HoldItem>().camP;
-                playerCam.GetComponent<newCamControl>().target = col.gameObject.GetComponent<HoldItem>().item.transform;
-            }
-            else
-            {
-                playerCam.GetComponent<newCamControl>().state = 0;
-                playerCam.GetComponent<newCamControl>().target = this.transform;
-            }
-            Panel.SetActive(!canMove);
-            PanelText.text =  col.gameObject.GetComponent<HoldItem>().description;
-            Debug.Log(col.gameObject.GetComponent<HoldItem>().description);
-           
-        }
-    }
     
     private void OnDrawGizmos()
     {

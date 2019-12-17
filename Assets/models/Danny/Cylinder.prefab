@@ -57,14 +57,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3893960996908575610}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 16.289896, y: 1.3816094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4628654564978534217}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &78033143745436418
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -124,8 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96311d9e7bbb73e45bf083272ea7b006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  description: This is a crystal
+  tubeSO: {fileID: 11400000, guid: 7ae1e5b4daf902c41b75bceabbe3aaf2, type: 2}
+  Player: {fileID: 0}
+  Panel: {fileID: 0}
+  playerCam: {fileID: 0}
+  PanelText: {fileID: 0}
   camP: {fileID: 4628654564978534217}
 --- !u!65 &3893960996908575612
 BoxCollider:
