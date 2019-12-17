@@ -9,14 +9,15 @@ public class HoldItem : MonoBehaviour
     public TubeSO tubeSO;
     public GameObject Player;
     public GameObject Panel, playerCam;
+    private GameObject item;
     public Text PanelText;
     public Transform camP;
 
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(tubeSO.item);
-        tubeSO.item.transform.position = transform.position + new Vector3(0,5);
+        item = Instantiate(tubeSO.item);
+        item.transform.position = transform.position + new Vector3(0,5);
         Panel.SetActive(false);
     }
 
@@ -24,7 +25,7 @@ public class HoldItem : MonoBehaviour
     void FixedUpdate()
     {
         //make item spin
-        tubeSO.item.transform.Rotate(0,0,1);
+        item.transform.Rotate(0,0,1);
     }
     public void OnTriggerStay(Collider col)
     {
@@ -36,7 +37,7 @@ public class HoldItem : MonoBehaviour
             {
                 playerCam.GetComponent<newCamControl>().state = 1;
                 playerCam.GetComponent<newCamControl>().cPoint = camP;
-                playerCam.GetComponent<newCamControl>().target = tubeSO.item.transform;
+                playerCam.GetComponent<newCamControl>().target = item.transform;
             }
             else
             {
