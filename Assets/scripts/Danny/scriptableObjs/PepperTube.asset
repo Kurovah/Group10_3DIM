@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05685f615c674b049bf6b1a54b731c3b, type: 3}
-  m_Name: CrysTube
+  m_Name: PepperTube
   m_EditorClassIdentifier: 
-  item: {fileID: 9060686991261725334, guid: 87b45dadb5948ac45a17d2b091fcf21b, type: 3}
-  description: This crystal was found on the planet Jhoterra. Caution should be advised
-    when handling this as it has exibited acidic properties
+  item: {fileID: 0}
+  description: 

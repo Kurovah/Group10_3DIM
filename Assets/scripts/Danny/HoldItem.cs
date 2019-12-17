@@ -21,12 +21,12 @@ public class HoldItem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //make itmem spin
+        //make item spin
         tubeSO.item.transform.Rotate(0,0,1);
     }
-    public void OnCollisionStay(Collision col)
+    public void OnTriggerStay(Collider col)
     {
         //look for the tube triggers
         if (Input.GetKeyDown(KeyCode.K))
@@ -44,8 +44,8 @@ public class HoldItem : MonoBehaviour
                 playerCam.GetComponent<newCamControl>().target = Player.transform;
             }
             Panel.SetActive(!Player.GetComponent<char_control>().canMove);
-            PanelText.text = col.gameObject.GetComponent<HoldItem>().tubeSO.description;
-            Debug.Log(col.gameObject.GetComponent<HoldItem>().tubeSO.description);
+            PanelText.text = tubeSO.description;
+            Debug.Log(tubeSO.description);
 
         }
     }
