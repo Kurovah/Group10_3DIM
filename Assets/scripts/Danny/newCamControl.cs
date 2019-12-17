@@ -12,7 +12,6 @@ public class newCamControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        distance = 10f;
         xAngle = 18f;
         yAngle = 90;
         state = 0;

@@ -261,11 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1383002384}
-  wheel: {fileID: 0}
   anim: {fileID: 0}
-  Panel: {fileID: 0}
-  playerCam: {fileID: 1322256733}
-  PanelText: {fileID: 0}
+  canMove: 0
 --- !u!136 &234358663
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -438,6 +435,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2502393661346836779, guid: 1d8dc11cb480f3248838a21fff18e68d,
+        type: 3}
+      propertyPath: goToScene
+      value: LithusanRobotMoveScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d8dc11cb480f3248838a21fff18e68d, type: 3}
 --- !u!1 &1322256733
@@ -542,7 +544,7 @@ MonoBehaviour:
   cPoint: {fileID: 0}
   xAngle: 0
   yAngle: 0
-  distance: 0
+  distance: 30
   dir: {x: 0, y: 0, z: 0}
   state: 0
 --- !u!1 &1364686901
@@ -720,6 +722,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2502393661346836779, guid: 1d8dc11cb480f3248838a21fff18e68d,
+        type: 3}
+      propertyPath: goToScene
+      value: DannyArtefactRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d8dc11cb480f3248838a21fff18e68d, type: 3}
 --- !u!1001 &1944144696
@@ -803,6 +810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200.00012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502393661346836779, guid: 1d8dc11cb480f3248838a21fff18e68d,
+        type: 3}
+      propertyPath: goToScene
+      value: DennisRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d8dc11cb480f3248838a21fff18e68d, type: 3}
@@ -990,6 +1002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200.00012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502393661346836779, guid: 1d8dc11cb480f3248838a21fff18e68d,
+        type: 3}
+      propertyPath: goToScene
+      value: VanessaRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d8dc11cb480f3248838a21fff18e68d, type: 3}
