@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3123342, g: 0.25738236, b: 0.27120396, a: 1}
+  m_IndirectSpecularColor: {r: 0.31238076, g: 0.25728068, b: 0.27117038, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -446,7 +446,23 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 786321913425143627, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 234863337345868546, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -6720450588942196575, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 235127624386309260, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 709498687517356889, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 8643780485086058037, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -1417714436277191143, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -3964674942290504222, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -8863276651928957515, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 6666670173739017417, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 7427276016836608985, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 6350625874902351990, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: 5739736266900467522, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -5152241773520201945, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -8630610868121109598, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
+    - {fileID: -5270163448495167283, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efc507ba1a6764ca690def1ee71955d3, type: 3}
 --- !u!1001 &1976444256
 PrefabInstance:
