@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5e250e15bba55479b74b67c0de3f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 107830051}
 --- !u!1 &150882363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8240531316018596090, guid: ac43d166ab5ff31438815edbc083b3e9,
@@ -3658,35 +3658,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6183403892224977939, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
-        type: 3}
-      propertyPath: m_Name
-      value: rightleg
-      objectReference: {fileID: 0}
-    - target: {fileID: -6196336315052758620, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
-        type: 3}
-      propertyPath: m_Name
-      value: leftleg
-      objectReference: {fileID: 0}
     - target: {fileID: -6583554764544579474, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
         type: 3}
       propertyPath: m_Name
       value: rightarm
       objectReference: {fileID: 0}
-    - target: {fileID: 4928742005273974948, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
+    - target: {fileID: -6196336315052758620, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
         type: 3}
       propertyPath: m_Name
-      value: leftarm
-      objectReference: {fileID: 0}
-    - target: {fileID: -2627911084389067113, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
-        type: 3}
-      propertyPath: m_Name
-      value: righthand
-      objectReference: {fileID: 0}
-    - target: {fileID: 8584599051582599315, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
-        type: 3}
-      propertyPath: m_Name
-      value: lefthand
+      value: leftleg
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
         type: 3}
@@ -3742,6 +3722,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2627911084389067113, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
+        type: 3}
+      propertyPath: m_Name
+      value: righthand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928742005273974948, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
+        type: 3}
+      propertyPath: m_Name
+      value: leftarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183403892224977939, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
+        type: 3}
+      propertyPath: m_Name
+      value: rightleg
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584599051582599315, guid: 8d7151f7d0a1cc94ca610eb3672c6836,
+        type: 3}
+      propertyPath: m_Name
+      value: lefthand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7151f7d0a1cc94ca610eb3672c6836, type: 3}
