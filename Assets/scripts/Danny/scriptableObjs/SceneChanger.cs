@@ -12,6 +12,7 @@ public class SceneChanger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             SceneManager.LoadScene(goToScene);
+            Debug.Log("inTrigger");
         }
     }
 }
