@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement
+using UnityEngine.SceneManagement;
 
-public class nextScene : MonoBehaviour
+public class BtnClick : MonoBehaviour
 {
  public void BtnNewScene()
  {
- SceneManager.LoadScene("LithusanRoom")
+ SceneManager.LoadScene("LithusanRoom");
  }
 }
