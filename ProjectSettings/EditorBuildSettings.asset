@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VanessaRoom.unity
     guid: bff37be55860b354ba1d71c8e0158e14
+  - enabled: 1
+    path: Assets/Scenes/LithusanRoom.unity
+    guid: eb8f54dfcf2d24ecc8a35a04c1d2b4e3
+  - enabled: 1
+    path: Assets/Scenes/jetFlying.unity
+    guid: 443df710b106d478eb5cf2ce60e9ec7c
   m_configObjects: {}

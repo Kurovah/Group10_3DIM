@@ -44,9 +44,9 @@ public class Flying : MonoBehaviour
 
 		}
 
-		if (speed < 500)
+		if (speed < 300)
 		{
-			speed = 500.0f;
+			speed = 300.0f;
 
 		}
 
