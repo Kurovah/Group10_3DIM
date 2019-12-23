@@ -13,9 +13,14 @@ public class AnimatorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("w")) 
+        if (Input.GetKeyDown("w")) 
         {
             this.GetComponent<Animator>().Play("CharAnim");
+        }
+
+        if (Input.GetKeyUp("w"))
+        {
+            this.GetComponent<Animator>().Play("rest");
         }
     }
 }
