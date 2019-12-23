@@ -1,11 +1,10 @@
-﻿Shader "Custom/FresnelEffect"
+﻿Shader "Custom/FresnelEffectOpaque"
 {
 	Properties{
 		_Color("Tint", Color) = (0, 0, 0, 1)
 		_MainTex("Texture", 2D) = "white" {}
 		_Smoothness("Smoothness", Range(0, 1)) = 0
 		_Metallic("Metalness", Range(0, 1)) = 0
-		_Transparency("Transparency", Range(0,1)) = 0.5
 		[HDR] _Emission("Emission", color) = (0,0,0)
 
 		_FresnelColor("Fresnel Color", Color) = (1,1,1,1)
@@ -13,8 +12,7 @@
 	}
 		SubShader{
 			//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
-			Tags{ "Queue" = "AlphaTest" "RenderType" = "TransparentCutout"}
-			Blend SrcAlpha OneMinusSrcAlpha
+			Tags{ "Queue" = "Geometry" "RenderType" = "Opaque"}
 			CGPROGRAM
 
 			//the shader is a surface shader, meaning that it will be extended by unity in the background to have fancy lighting and other features
@@ -32,7 +30,6 @@
 
 			float3 _FresnelColor;
 			float _FresnelExponent;
-			float _Transparency;
 
 			//input struct which is automatically filled by unity
 			struct Input {
@@ -64,7 +61,6 @@
 				float3 fresnelColor = fresnel * _FresnelColor;
 				//apply the fresnel value to the emission
 				o.Emission = _Emission + fresnelColor;
-				o.Alpha = _Transparency;
 			}
 			ENDCG
 		}
