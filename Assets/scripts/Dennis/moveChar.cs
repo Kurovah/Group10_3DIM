@@ -32,12 +32,7 @@ public class moveChar : MonoBehaviour
 
         transform.position += transform.forward * Time.deltaTime * speed;
 
-
-
-
-
-
-
+       
 
         if (Input.GetKey(KeyCode.A))
         {
