@@ -3,57 +3,7 @@ guid: ac43d166ab5ff31438815edbc083b3e9
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 1026___
-    second: {fileID: 2100000, guid: 32171af295f937343ae4b30e3ba99204, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 129___
-    second: {fileID: 2100000, guid: 5fe5e8c1f0ca3ff4fb55f972302e9efb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 194_10241stk1__
-    second: {fileID: 2100000, guid: d1ad7c58ef7ce7947a6ad5e828bc0c10, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 2004___
-    second: {fileID: 2100000, guid: 818f5e1a7994c6e4b8fa57e8771a6f47, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 26___
-    second: {fileID: 2100000, guid: 79a20907d11f6a44d8ae3e9065e828c0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 302___
-    second: {fileID: 2100000, guid: 42838ecb81a5ebc448c14084f565cef4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 304___
-    second: {fileID: 2100000, guid: 648f3db844a3bba429a55947a4f9e8ac, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 309___
-    second: {fileID: 2100000, guid: cbd5b741ac505c5489357a9236c59639, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 40_rfid1__rfid1_metal
-    second: {fileID: 2100000, guid: b1589b4ea722b1d4bb497b03ab2a9944, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 42___
-    second: {fileID: 2100000, guid: 6beba2cdb6394d04a80376d7138e0a6e, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
