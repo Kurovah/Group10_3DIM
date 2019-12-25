@@ -13,14 +13,14 @@
 	}
 		SubShader{
 			//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
-			Tags{ "Queue" = "AlphaTest" "RenderType" = "TransparentCutout"}
+			Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
 			Blend SrcAlpha OneMinusSrcAlpha
 			CGPROGRAM
 
 			//the shader is a surface shader, meaning that it will be extended by unity in the background to have fancy lighting and other features
 			//our surface shader function is called surf and we use the standard lighting model, which means PBR lighting
 			//fullforwardshadows makes sure unity adds the shadow passes the shader might need
-			#pragma surface surf Standard fullforwardshadows 
+			#pragma surface surf Standard fullforwardshadows alpha 
 			#pragma target 3.0
 
 			sampler2D _MainTex;
