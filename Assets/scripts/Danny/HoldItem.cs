@@ -30,7 +30,7 @@ public class HoldItem : MonoBehaviour
     }
     public void OnTriggerStay(Collider col)
     {
-        //look for the tube triggers
+        //if pressing K in the trigger, do thing
         if (Input.GetKeyDown(KeyCode.K))
         {
             Player.GetComponent<char_control>().canMove = !Player.GetComponent<char_control>().canMove;
