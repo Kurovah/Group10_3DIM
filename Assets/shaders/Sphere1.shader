@@ -2,13 +2,18 @@
 {
     Properties
     {
-        _MagmaColor ("Color", Color) = (1,0,1,1)
-		_RockColor("Rcolor", Color) = (1,1,0,1)
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _P1Col1 ("P1Col1", Color) = (1,0,1,1)
+		_P1Col2("P1Col2", Color) = (1,1,0,1)
+		_P2Col1("P2Col1", Color) = (1,1,0,1)
+		_P2Col2("P2Col2", Color) = (1, 1, 0, 1)
+        _MainTex ("MainTex", 2D) = "white" {}
+		_SecondTex ("SecondTex", 2D) = "white" {}
+		_BlendTex ("BlendTex", 2D) = "white" {}
+		_cutoff ("Cutoff", Range(0,1)) = 0.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent" }
         LOD 200
 
         CGPROGRAM
@@ -18,14 +23,17 @@
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
 
-        sampler2D _MainTex;
+        sampler2D _MainTex,_SecondTex,_BlendTex;
 
         struct Input
         {
-            float2 uv_MainTex;
+            float2 uv_MainTex, uv_SecondTex, uv_BlendTex;
         };
-        fixed4 _RockColor;
-		fixed4 _MagmaColor;
+        fixed4 _P1Col2;
+		fixed4 _P1Col1;
+		fixed4 _P2Col1;
+		fixed4 _P2Col2;
+		float _cutoff;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -36,22 +44,17 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-            // Albedo comes from a texture tinted by color
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
-			if (c.r == 1) {
-				o.Albedo = _MagmaColor;
-				o.Emission = _MagmaColor;
-			}
-			else if(c.r == 0){
-				o.Albedo = _RockColor;
-				o.Emission = _RockColor;
+            fixed4 c1 = tex2D (_MainTex, IN.uv_MainTex);
+			fixed4 c2 = tex2D(_SecondTex, IN.uv_SecondTex);
+			fixed4 c3 = tex2D(_BlendTex, IN.uv_BlendTex);
+			if (c3.r > _cutoff) {
+				o.Albedo = lerp(_P1Col2, _P1Col1, c1.r);
+				o.Emission = lerp(_P1Col2, _P1Col1, c1.r);
 			}
 			else {
-				o.Albedo = lerp(_RockColor, _MagmaColor, c.r);
-				o.Emission = lerp(_RockColor, _MagmaColor, c.r);
-
+				o.Albedo = lerp(_P2Col2, _P2Col1, c2.r);
+				o.Emission = lerp(_P2Col2, _P2Col1, c2.r);
 			}
-            o.Alpha = c.a;
         }
         ENDCG
     }

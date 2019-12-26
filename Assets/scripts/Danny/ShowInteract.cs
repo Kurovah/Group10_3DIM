@@ -13,7 +13,7 @@ public class ShowInteract : MonoBehaviour
     {
         textPanel.SetActive(false);
     }
-
+   
     private void OnTriggerStay(Collider other)
     {
         //only display this if the player can move
