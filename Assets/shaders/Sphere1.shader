@@ -41,7 +41,6 @@
         UNITY_INSTANCING_BUFFER_START(Props)
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
-
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             fixed4 c1 = tex2D (_MainTex, IN.uv_MainTex);
