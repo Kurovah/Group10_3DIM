@@ -47,13 +47,16 @@
             fixed4 c1 = tex2D (_MainTex, IN.uv_MainTex);
 			fixed4 c2 = tex2D(_SecondTex, IN.uv_SecondTex);
 			fixed4 c3 = tex2D(_BlendTex, IN.uv_BlendTex);
-			if (c3.r > _cutoff) {
+			if (c3.r > _cutoff+0.01) {
 				o.Albedo = lerp(_P1Col2, _P1Col1, c1.r);
 				o.Emission = lerp(_P1Col2, _P1Col1, c1.r);
 			}
-			else {
+			else if (c3.r < _cutoff-0.01) {
 				o.Albedo = lerp(_P2Col2, _P2Col1, c2.r);
 				o.Emission = lerp(_P2Col2, _P2Col1, c2.r);
+			}else {
+				o.Albedo = fixed4(1, 1, 1, 1);
+				o.Emission = fixed4(1, 1, 1, 1);
 			}
         }
         ENDCG
