@@ -17,13 +17,17 @@ public class OnTriggerLd : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             guiObject.SetActive(true);
-            if (guiObject.activeInHierarchy == true && Input.GetButtonDown("Use"))
-            {
-                SceneManager.LoadScene("planets");
-            }
+            
         }
     }
 
+    void Update()
+    {
+        if (guiObject.activeInHierarchy == true && Input.GetButtonDown("Use"))
+        {
+            SceneManager.LoadScene("planets");
+        }
+    }
     void OnTriggerExit()
     {
         guiObject.SetActive(false);
