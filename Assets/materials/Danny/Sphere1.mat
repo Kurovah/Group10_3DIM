@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SecondTex:
-        m_Texture: {fileID: 2800000, guid: 69d866a979e04aa48b9e46948c4a7dda, type: 3}
+        m_Texture: {fileID: 2800000, guid: 04e16c8fd0d33034483725f8b745c3e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -87,7 +87,7 @@ Material:
     - _MagmaColor: {r: 0.9056604, g: 0.51901907, b: 0.31185475, a: 1}
     - _P1Col1: {r: 0.882353, g: 0.882353, b: 0.882353, a: 1}
     - _P1Col2: {r: 1, g: 1, b: 0, a: 1}
-    - _P2Col1: {r: 0.21586864, g: 0.3058013, b: 0.7264151, a: 1}
-    - _P2Col2: {r: 0.22249912, g: 0.22485222, b: 0.3773585, a: 1}
+    - _P2Col1: {r: 0.16447133, g: 0.26798713, b: 0.4528302, a: 1}
+    - _P2Col2: {r: 0.2256141, g: 0.5021203, b: 0.735849, a: 1}
     - _RockColor: {r: 0.2735849, g: 0.18454076, b: 0.18454076, a: 1}
     - _rockColor: {r: 1, g: 1, b: 1, a: 1}
