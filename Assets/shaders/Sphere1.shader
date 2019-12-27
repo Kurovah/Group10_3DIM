@@ -10,6 +10,7 @@
 		_SecondTex ("SecondTex", 2D) = "white" {}
 		_BlendTex ("BlendTex", 2D) = "white" {}
 		_cutoff ("Cutoff", Range(0,1)) = 0.0
+		_cutoffRange("CutoffRange", Range(0,1)) = 0.1
     }
     SubShader
     {
@@ -18,7 +19,7 @@
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf Standard fullforwardshadows Lambert vertex:vert
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -33,7 +34,7 @@
 		fixed4 _P1Col1;
 		fixed4 _P2Col1;
 		fixed4 _P2Col2;
-		float _cutoff;
+		float _cutoff, _cutoffRange;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -41,16 +42,22 @@
         UNITY_INSTANCING_BUFFER_START(Props)
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
+		void vert(inout appdata_full v) {
+			float r = tex2Dlod(_BlendTex, float4(v.texcoord.xy, 0, 0)).r;
+			if (r < _cutoff + _cutoffRange && r > _cutoff - _cutoffRange) {
+				v.vertex.xyz += v.normal * 0.05;
+			}
+		}
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             fixed4 c1 = tex2D (_MainTex, IN.uv_MainTex);
 			fixed4 c2 = tex2D(_SecondTex, IN.uv_SecondTex);
 			fixed4 c3 = tex2D(_BlendTex, IN.uv_BlendTex);
-			if (c3.r > _cutoff+0.01) {
+			if (c3.r > _cutoff+ _cutoffRange) {
 				o.Albedo = lerp(_P1Col2, _P1Col1, c1.r);
 				o.Emission = lerp(_P1Col2, _P1Col1, c1.r);
 			}
-			else if (c3.r < _cutoff-0.01) {
+			else if (c3.r < _cutoff- _cutoffRange) {
 				o.Albedo = lerp(_P2Col2, _P2Col1, c2.r);
 				o.Emission = lerp(_P2Col2, _P2Col1, c2.r);
 			}else {
