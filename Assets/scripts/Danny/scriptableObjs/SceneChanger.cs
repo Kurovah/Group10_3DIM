@@ -9,7 +9,7 @@ public class SceneChanger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKey(KeyCode.K))
         {
             SceneManager.LoadScene(goToScene);
             Debug.Log("inTrigger");

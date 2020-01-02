@@ -10,12 +10,11 @@ public class char_control : MonoBehaviour
     public Animator anim;
     RaycastHit ray;
     private Vector3 velo, move;
-    private float spd;
+    public float spd = 15;
     public bool canMove;
     // Start is called before the first frame update
     void Start()
     {
-        spd = 15;
         rb = GetComponent<Rigidbody>();
         velo = move  = Vector3.zero;
         canMove = true;

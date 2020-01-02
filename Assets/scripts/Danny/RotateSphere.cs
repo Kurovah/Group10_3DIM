@@ -19,7 +19,7 @@ public class RotateSphere : MonoBehaviour
     void Update()
     {
         sphere.Rotate(0,0.5f,0);
-        sphere.position = new Vector3(transform.position.x, transform.position.y + 15 + Mathf.Sin(Time.time), transform.position.z);
+        sphere.position = new Vector3(transform.position.x, transform.position.y + 20 + Mathf.Sin(Time.time), transform.position.z);
         c = Mathf.Lerp(c, end, 0.1f);
         rend.material.SetFloat("_cutoff", c);
     }
