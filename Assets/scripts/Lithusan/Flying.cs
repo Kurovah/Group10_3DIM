@@ -13,7 +13,7 @@ public class Flying : MonoBehaviour
 	public float rotSpeed2;
 	void Start()
 	{
-
+        speed = maxSpeed;
 	}
 
 	void Update()
@@ -37,18 +37,6 @@ public class Flying : MonoBehaviour
 		}
 
 		speed -= transform.forward.y * Time.deltaTime * 50;
-
-		if (speed < 70)
-		{
-			speed = 70.0f;
-
-		}
-
-		if (speed < 300)
-		{
-			speed = 300.0f;
-
-		}
 
 
 		if (Input.GetKey(KeyCode.LeftArrow))
