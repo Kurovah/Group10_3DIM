@@ -1261,9 +1261,9 @@ MonoBehaviour:
 
     5 = Inspect planet 5
 
-    Space = Return to normal view
+    Space = Normal view
 
-'
+    Escape = Return to the planet viewer'
 --- !u!222 &1152942249
 CanvasRenderer:
   m_ObjectHideFlags: 0
