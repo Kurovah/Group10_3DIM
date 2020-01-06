@@ -25,8 +25,8 @@ public class HoldItem : MonoBehaviour
     void FixedUpdate()
     {
         //make item spin
-        item.transform.Rotate(0,0,1);
-        item.transform.position = new Vector3(item.transform.position.x, Mathf.Sin(Time.time)+6, item.transform.position.z);
+        item.transform.Rotate(0,0,1 * Time.deltaTime);
+        item.transform.position = new Vector3(item.transform.position.x, Mathf.Sin(Time.time) * Time.deltaTime * 15+ 6, item.transform.position.z);
     }
     public void OnTriggerStay(Collider col)
     {

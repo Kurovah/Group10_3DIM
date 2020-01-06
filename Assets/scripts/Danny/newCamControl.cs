@@ -27,15 +27,15 @@ public class newCamControl : MonoBehaviour
         xAngle = Mathf.Clamp(xAngle, 10, 87);
         trueForward.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
         if (Input.GetKey(KeyCode.Q))
-        { xAngle--; }
+        { xAngle -=Time.deltaTime*15; }
         else if (Input.GetKey(KeyCode.E))
-        { xAngle++; }
+        { xAngle+= Time.deltaTime * 15; }
 
         //vertical
         if (Input.GetKey(KeyCode.O))
-        { yAngle--; }
+        { yAngle -= Time.deltaTime * 15; }
         else if (Input.GetKey(KeyCode.P))
-        { yAngle++; }
+        { yAngle += Time.deltaTime * 15; }
            
     }
     void FixedUpdate()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class sceneChange : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class sceneChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel("room");
+            SceneManager.LoadScene("room");
         }
     }
 }

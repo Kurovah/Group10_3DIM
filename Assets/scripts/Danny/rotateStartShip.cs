@@ -15,6 +15,6 @@ public class rotateStartShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ship.Rotate(0, 0.05f, 0);
+        ship.Rotate(0, 0.05f*Time.deltaTime, 0);
     }
 }

@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.5, y: 1.68}
+  m_SizeDelta: {x: -43.35, y: -29.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31483953
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GO BACK TO HANGER
+  m_Text: GO BACK TO HANGAR
 --- !u!222 &31483954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5074,13 +5074,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 31483952}
-  m_Father: {fileID: 1682309193}
-  m_RootOrder: 0
+  m_Father: {fileID: 1315860199}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.600006, y: -25.486}
-  m_SizeDelta: {x: -68, y: -70.571}
+  m_AnchoredPosition: {x: 280.0001, y: -180.29997}
+  m_SizeDelta: {x: -644.6, y: -380.3}
   m_Pivot: {x: 0.5, y: 0.4999998}
 --- !u!114 &447121222
 MonoBehaviour:
@@ -5158,7 +5158,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 0e924b3d7cfe1d449b9f9b21bc995226, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5206,12 +5206,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1682309193}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.600006, y: 13.700001}
-  m_SizeDelta: {x: -68, y: -56.3}
+  m_AnchoredPosition: {x: -2.050003, y: -1.1699982}
+  m_SizeDelta: {x: -46.9, y: -14.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &479666232
 MonoBehaviour:
@@ -5237,7 +5237,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -5246,7 +5246,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Don't go to far or you will get lost in the galexy!! If you do just press
+  m_Text: Don't go to far or you will get lost in the galaxy!! If you do just press
     on the auto return button below
 --- !u!222 &479666233
 CanvasRenderer:
@@ -6155,6 +6155,7 @@ RectTransform:
   m_Children:
   - {fileID: 2114168000}
   - {fileID: 1682309193}
+  - {fileID: 447121221}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6202,6 +6203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445322912}
   - component: {fileID: 1445322913}
+  - component: {fileID: 1445322914}
   m_Layer: 0
   m_Name: CamPivot
   m_TagString: Untagged
@@ -6237,6 +6239,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1332666423}
+--- !u!114 &1445322914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445322911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9118190f3bf2e401baf5b423969c1780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1682309192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,15 +6280,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 447121221}
   - {fileID: 479666231}
   m_Father: {fileID: 1315860199}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 274.4, y: -130.7}
-  m_SizeDelta: {x: -576.6, y: -261.4}
+  m_AnchoredPosition: {x: 280.0001, y: -16.8}
+  m_SizeDelta: {x: -644.6, y: -291.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682309194
 MonoBehaviour:
@@ -11442,8 +11455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 134}
-  m_SizeDelta: {x: -400, y: -291.5}
+  m_AnchoredPosition: {x: 0, y: 187}
+  m_SizeDelta: {x: -400, y: -397.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114168001
 MonoBehaviour:

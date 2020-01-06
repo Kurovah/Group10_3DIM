@@ -6701,7 +6701,7 @@ PrefabInstance:
     - target: {fileID: 2502393661346836779, guid: 1d8dc11cb480f3248838a21fff18e68d,
         type: 3}
       propertyPath: goToScene
-      value: VanessaRoom
+      value: VanessaScene
       objectReference: {fileID: 0}
     - target: {fileID: 7128323479285279776, guid: 1d8dc11cb480f3248838a21fff18e68d,
         type: 3}
